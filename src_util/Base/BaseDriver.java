@@ -7,11 +7,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import Util.ExcelUtil;
 
 public class BaseDriver {
-	
+	/*
+	 * This class will set the necessary parameters to run from an external file all the test cases we need
+	 * The file layout is Name, Username, Password, BaseURL
+	 * We use a Map(Collection) to save our parameters from the external file
+	 */
 	String path = System.getProperty("user.dir");
 	protected Map<String, String> configData = ExcelUtil.getSpecifySheet("./Data/Data.xls", "TestData", "TC_01_Login");
     protected WebDriver driver = null;
-
+    
+    /*
+     * Create a method to set the type of driver, this time we're gonna use geckodriver for firefox
+     * and take the url from the Map
+     */
 	public void beforeClass(String driverType, String testCaseName) throws InterruptedException, IOException {
 
 		System.out.println("Starting TestCase: " + testCaseName); 
@@ -20,6 +28,10 @@ public class BaseDriver {
 		
 	}
 					
+	/*
+	 * Initialize the web driver
+	 * We can add google or safari
+	 */
 	public void initWebDriver(String driverType) {
 
 		switch (driverType.trim()) {
@@ -29,6 +41,10 @@ public class BaseDriver {
 		}	
 	}
 
+	/*
+	 * I use a thread but is not necessary to understand why, but for referral it's a explicit wait
+	 * it will wait until all the process ends, and quit the browser
+	 */
 	public void afterClass(String testCaseName) throws InterruptedException {
 		
 		Thread.sleep(3000);
@@ -37,6 +53,9 @@ public class BaseDriver {
 					
 	}
 	
+	/*
+	 * Get the driver in this case firefox driver
+	 */
 	public WebDriver getFirefoxDriver() {
 		
 		try {

@@ -12,7 +12,7 @@ import PageObjects.LoginPage;
 public class Login {
 	/*
 	 * We are gonna use an external file to pass all the variables to our project
-	 * so, we use a Map to save our parameters, also our attributes will be protected type
+	 * so, we use a Map(Collection) to save our parameters, also our attributes will be protected type
 	 */
 	
 	protected Map<String,String> dataValue = ExcelUtil.getSpecifySheet("./Data/Data.xls", "TestData", "TC_01_Login");
