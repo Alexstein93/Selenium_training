@@ -4,6 +4,7 @@
 
 ### Resources
 - Selenium 3.141.59
+- jUnit 3
 - Firefox 42.0
 
 ## TestCase 
