@@ -1,0 +1,15 @@
+#Test Case 01
+
+##Login to Facebook Page
+
+Objective: The following steps are to log in into the facebook page.
+
+Previous requirements: Have a user for FB Page
+
+###Steps
+
+1. Open Facebook Page
+2. Write our username
+3. Write our password
+4. Log in
+
