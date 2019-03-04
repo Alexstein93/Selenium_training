@@ -10,6 +10,13 @@
 ## TestCase 
 There's a file called TC_01_Login_Facebok, has a little test case
 
+## Full tree of the project
+- Data: Dir to save an external file with the info needed to our test cases, it is an excel file
+- Driver: Dir to save each driver you need to each browser
+- src_page: Dir with all the java classes
+- src_util: Dir with the utilities to set the enviroment of our project,for example the call to the excel file or DB connection
+
+
 ## POM(Page Object Model)
 For this pattern we take every part(Section, menu, module) fo the page like an object, our source folder will have the follow structure:
 
