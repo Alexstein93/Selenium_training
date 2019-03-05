@@ -4,7 +4,6 @@ import Util.ExcelUtil;
 
 import java.util.Map;
 
-
 import org.openqa.selenium.WebDriver;
 
 import PageObjects.LoginPage;
@@ -44,6 +43,7 @@ public class Login {
 	
 	public void openSite() {
 		try {
+			//Verify if the title of the page is equals to the expected string
 			if (objLogin.getPageTitle().equals("Facebook - Inicia sesión o regístrate")) {
 				System.out.println("Result: Step 1 - Open site | Correct");
 			} else {
@@ -56,6 +56,7 @@ public class Login {
 	
 	public void setUsername() {
 		try {
+			//Send text to the username input
 			objLogin.getUsernameInput().sendKeys(dataValue.get("Username"));
 			System.out.println("Result: Step 2 - Set username | Correct");
 		} catch (Exception e) {
@@ -65,6 +66,7 @@ public class Login {
 	
 	public void setPassword() {
 		try {
+			//Send text to the password input
 			objLogin.getPasswordInput().sendKeys(dataValue.get("Password"));
 			System.out.println("Result: Step 3 - Set password | Correct");
 		} catch (Exception e) {
@@ -74,6 +76,7 @@ public class Login {
 	
 	public void clickLogin() {
 		try {
+			//Do click to the login button
 			objLogin.getLoginButton().click();
 			System.out.println("Result: Step 3 - Set password | Correct");
 		} catch(Exception e) {
